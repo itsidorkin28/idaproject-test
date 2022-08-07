@@ -10,7 +10,7 @@
 		<img :src='product.imgUrl' :alt='product.title' class='object-cover h-52 w-full rounded-t'>
 		<div class='px-4 mb-8 break-all'>
 			<h3 class='my-4 font-semibold text-xl first-letter:uppercase'> {{ product.title }}</h3>
-			<div class='h-[5rem] overflow-scroll'>
+			<div class='descriptionBlock'>
 				<p class='first-letter:uppercase' v-if='product.description'>{{ product.description }}</p>
 				<p v-else>Продукт не содержит описания.</p>
 			</div>
@@ -51,6 +51,14 @@ export default {
 		background-position: center;
 		@apply absolute cursor-pointer w-8 h-8 bg-[#FF8484] rounded-lg
 		right-[-0.6rem] top-[-0.6rem] transition-all;
+	}
+}
+
+.descriptionBlock {
+	@apply h-[5rem] overflow-y-auto;
+
+	&::-webkit-scrollbar {
+		display: none;
 	}
 }
 
