@@ -1,5 +1,5 @@
 import { getItem, setItem } from '@/helpers/persistanceStorage'
-
+import {mutationTypes, actionTypes, getterTypes} from './types/products.types'
 const state = {
 	products: [
 		{
@@ -33,14 +33,6 @@ const state = {
 	],
 }
 
-export const mutationTypes = {
-	setProducts: '[products] Set products',
-	createProduct: '[products] Create product',
-	removeProduct: '[products] Remove product',
-	sortByName: '[products] Sort by name',
-	sortByMinPrice: '[products] Sort by min price',
-	sortByMaxPrice: '[products] Sort by max price',
-}
 
 const mutations = {
 	[mutationTypes.setProducts](state, payload) {
@@ -62,12 +54,6 @@ const mutations = {
 	[mutationTypes.sortByMaxPrice](state) {
 		state.products.sort((a, b) => a.price < b.price ? 1 : -1)
 	},
-
-}
-export const actionTypes = {
-	initializationApp: '[products] initializationApp',
-	createProduct: '[products] createProduct',
-	removeProduct: '[products] removeProduct',
 }
 
 const actions = {
@@ -91,10 +77,6 @@ const actions = {
 		this._vm.$toast.success('Продукт успешно удален!')
 
 	},
-}
-
-export const getterTypes = {
-	products: '[products] products',
 }
 
 const getters = {

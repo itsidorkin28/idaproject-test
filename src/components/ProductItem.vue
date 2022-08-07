@@ -22,7 +22,8 @@
 </template>
 
 <script>
-import { actionTypes } from '@/store/modules/products'
+
+import { actionTypes } from '@/store/modules/types/products.types'
 
 export default {
 	name: 'ProductItem',

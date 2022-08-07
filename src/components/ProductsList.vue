@@ -22,8 +22,8 @@
 <script>
 import ProductItem from '@/components/ProductItem'
 import { mapGetters } from 'vuex'
-import { actionTypes, getterTypes, mutationTypes } from '@/store/modules/products'
 import SuperSelect from '@/components/SuperSelect'
+import { actionTypes, getterTypes, mutationTypes } from '@/store/modules/types/products.types'
 
 export default {
 	name: 'ProductsList',

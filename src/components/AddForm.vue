@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import { actionTypes } from '@/store/modules/products'
 import { url, required, minLength, maxLength, minValue, numeric } from 'vuelidate/lib/validators'
+import { actionTypes } from '@/store/modules/types/products.types'
 
 export default {
 	name: 'AddForm',
